@@ -1,11 +1,11 @@
-#coding:utf-8
+# coding:utf-8
 from flask import Flask, redirect, url_for, request
 from datetime import datetime
 from flask_bootstrap import Bootstrap
-from app.config_default import Config as DefaultConfig
-
+from app.config import Config as DefaultConfig
 
 bootstrap = Bootstrap()
+
 
 def check_start(app, db):
     from app.includes.start import _exist_config, exist_table, load_site, create_path
@@ -18,6 +18,7 @@ def check_start(app, db):
             load_site(app)
             app.start = True
             return
+
     @app.before_request
     def request_check_start():
         if app.start:
@@ -62,8 +63,10 @@ def create_app():
     db.PREFIX = app.config["DB_PREFIX"]
 
     app.site = {}
+
     def site_context_processor():
         return dict(site=app.site)
+
     app.context_processor(site_context_processor)
     check_start(app, db)
 
@@ -83,9 +86,7 @@ def create_app():
     login_manager.login_view = "admin.login"
     login_manager.login_message = "请先登录!!!"
 
-    from app.log  import init_logging
+    from app.log import init_logging
     init_logging(app)
 
     return app
-
-

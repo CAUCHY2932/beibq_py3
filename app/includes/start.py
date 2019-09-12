@@ -1,4 +1,4 @@
-#coding: utf-8
+# coding: utf-8
 import os
 from flask import current_app, render_template
 from sqlalchemy import *
@@ -15,7 +15,7 @@ def _exist_config(app):
 
 def create_config(username, password, host, db):
     data = render_template("admin/start/config.html", username=username,
-        password=password, host=host, db = db)
+                           password=password, host=host, db=db)
     filename = '{}/config.py'.format(current_app.root_path)
     fd = open(filename, "w")
     fd.write(data)
@@ -41,10 +41,12 @@ def connect_mysql(url):
        2005 => 主机地址错误
        1045 => 用户名密码错误"""
     try:
-        engine = create_engine(url)
-        connection = engine.connect()
+        eng = create_engine(url)
+        connection = eng.connect()
     except Exception as e:
-        code, _ = e.orig
+        print(e)
+        code = 0
+        # code, _ = e.orig
         return code
     return 0
 
@@ -76,8 +78,8 @@ def set_site(app):
 def load_site(app):
     with app.app_context():
         set_site(app)
+
         def site_context_processor():
             return dict(site=app.site)
+
         app.context_processor(site_context_processor)
-
-
