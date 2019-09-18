@@ -5,21 +5,32 @@ from sqlalchemy import *
 
 
 def exist_config():
-    return _exist_config(current_app)
+    return exist_config_file(current_app)
 
 
-def _exist_config(app):
+def exist_config_file(app):
     filename = "{}/config.py".format(app.root_path)
     return os.path.exists(filename)
 
 
 def create_config(username, password, host, db):
-    data = render_template("admin/start/config.html", username=username,
-                           password=password, host=host, db=db)
+    file_path = '{}/templates/admin/start/config_new.html'.format(current_app.root_path)
+    with open(file_path, 'r')as f:
+        data = f.read().format(username=username, password=password, host=host, db=db)
+    print(data)
     filename = '{}/config.py'.format(current_app.root_path)
     fd = open(filename, "w")
     fd.write(data)
     fd.close()
+
+# render_template 为了防止注入，会添加一些防止注入的东西，建议弃用
+# def create_config(username, password, host, db):
+#     data = render_template("admin/start/config.html", username=username.strip(),
+#                            password=password, host=host, db=db)
+#     filename = '{}/config.py'.format(current_app.root_path)
+#     fd = open(filename, "w")
+#     fd.write(data)
+#     fd.close()
 
 
 def create_path(app):

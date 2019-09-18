@@ -1,4 +1,4 @@
-#coding: utf-8
+# coding: utf-8
 
 def strdecode(text):
     if not isinstance(text, str):
@@ -8,5 +8,3 @@ def strdecode(text):
             text = text.decode('gbk', 'ignore')
         return text
     return text
-
-

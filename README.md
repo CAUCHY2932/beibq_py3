@@ -78,3 +78,6 @@ python manage.py runserver -h 0.0.0.0
 
 - 邮箱： chaijun@markbj.com
 
+## 注意事项
+
+2to3 可以使得python2迁移到python3

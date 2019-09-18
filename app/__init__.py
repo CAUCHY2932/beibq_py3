@@ -2,16 +2,16 @@
 from flask import Flask, redirect, url_for, request
 from datetime import datetime
 from flask_bootstrap import Bootstrap
-from app.config import Config as DefaultConfig
+from app.config_default import Config as DefaultConfig
 
 bootstrap = Bootstrap()
 
 
 def check_start(app, db):
-    from app.includes.start import _exist_config, exist_table, load_site, create_path
+    from app.includes.start import exist_config_file, exist_table, load_site, create_path
     create_path(app)
     app.start = False
-    if _exist_config(app):
+    if exist_config_file(app):
         from app.config import Config
         app.config.from_object(Config)
         if exist_table(app):
@@ -26,7 +26,7 @@ def check_start(app, db):
         ends = frozenset(["admin.setup", "admin.install", "static"])
         if request.endpoint in ends:
             return
-        if not _exist_config(app):
+        if not exist_config_file(app):
             return redirect(url_for("admin.setup"))
         return redirect(url_for("admin.install"))
 
