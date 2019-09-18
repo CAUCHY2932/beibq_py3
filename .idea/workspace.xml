@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14d66266-def0-45c9-b39a-f4b1e8147562" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/admin/start/config_new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/:memory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/views/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/views/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/includes/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/includes/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/includes/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/includes/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/start/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/start/config.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/web/views/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/views/home.py" afterDir="false" />
-    </list>
+    <list default="true" id="14d66266-def0-45c9-b39a-f4b1e8147562" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,8 +98,16 @@
       <updated>1568252387932</updated>
       <workItem from="1568252393320" duration="2197000" />
       <workItem from="1568271703211" duration="7437000" />
-      <workItem from="1568799036671" duration="73000" />
+      <workItem from="1568799036671" duration="321000" />
     </task>
+    <task id="LOCAL-00001" summary="# change readme and notify">
+      <created>1568799150102</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568799150102</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +125,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# change readme and notify" />
+    <option name="LAST_COMMIT_MESSAGE" value="# change readme and notify" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
