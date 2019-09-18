@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14d66266-def0-45c9-b39a-f4b1e8147562" name="Default Changelist" comment="" />
+    <list default="true" id="14d66266-def0-45c9-b39a-f4b1e8147562" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,7 @@
       <updated>1568252387932</updated>
       <workItem from="1568252393320" duration="2197000" />
       <workItem from="1568271703211" duration="7437000" />
-      <workItem from="1568799036671" duration="566000" />
+      <workItem from="1568799036671" duration="1944000" />
     </task>
     <task id="LOCAL-00001" summary="# change readme and notify">
       <created>1568799150102</created>
